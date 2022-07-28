@@ -3,7 +3,7 @@
 import React, { useState, Fragment } from 'react'
 import { Route, Routes } from 'react-router-dom'
 import { v4 as uuid } from 'uuid'
-import AutoDismissAlert from './components'
+import AutoDismissAlert from './components/shared/AutoDismissAlert/AutoDismissAlert'
 import RequireAuth from './components/shared/RequireAuth'
 import SignUp from './components/auth/SignUp'
 import SignIn from './components/auth/SignIn'
