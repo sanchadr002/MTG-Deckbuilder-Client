@@ -8,12 +8,14 @@ import { Link } from 'react-router-dom'
     // MTG is a complicated game!
 // User will navigate to the various components of the application from here
 const Home = (props) => {
-    console.log ('props in home', props)
 
     return (
         <>
-            {/* Add instructions for application use */}
-            {/* Add navigation links to different functionalities of the application */}
+            <div>
+                <p> hi there</p>
+            </div>
         </>
     )
 }
+
+export default Home
