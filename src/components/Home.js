@@ -1,7 +1,9 @@
 // import dependencies
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
+import { Spinner } from 'react-bootstrap'
+import { randomCard } from '../api/scryfall'
 
 // Home component
 // Home will act as a landing page
@@ -10,22 +12,53 @@ import axios from 'axios'
 // User will navigate to the various components of the application from here
 const Home = (props) => {
 
-    const randomCard = () => {
-        axios('https://api.scryfall.com/cards/random')
-            .then(card => console.log(card))
-            .catch(() => console.error())
+    // use setState to change the card that is displayed in the Home return component
+    const [randomCards, setCards] = useState(null)
+
+    // const randomCard = () => {
+    //     axios('https://api.scryfall.com/cards/random')
+    //         .then(res => {
+    //             // console.log(card.data.name)
+    //             setCards(res.data)
+    //         })
+    //         .catch(() => console.error())
+    // }
+
+    useEffect(() => {
+        randomCard()
+        .then(res => {
+            console.log('this is res.data', res.data)
+            return setCards(res.data)
+        })
+        .catch(console.error)
+    }, [])
+
+    // message for waiting for random cards to load
+    if (!randomCards){
+        return (<Spinner animation="border" role="status">
+            <span className="visually-hidden">Loading</span>
+        </Spinner>)
+    } else if (randomCards.length === 0) {
+        return <p>No random cards found</p>
     }
 
     const handleSubmit = (e) => {
         e.preventDefault()
         randomCard()
+        .then(res => {
+            return setCards(res.data)
+        })
+        console.log('click!')
     }
 
+    console.log('this is randomCards', randomCards)
     return (
         <>
             <form onSubmit={handleSubmit}>
                 <input type="submit" value="random card"/>
             </form>
+            <img src={randomCards.image_uris.normal.toString()}/>
+            <div>{randomCards.name}</div>
         </>
     )
 }
