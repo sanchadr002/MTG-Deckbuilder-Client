@@ -9,17 +9,5 @@ export const scryfallSearch = (searchParams) => {
 }
 
 export const randomCard = () => {
-    let cardsArr = []
-    axios('https://api.scryfall.com/cards/random')
-        .then(card => cardsArr.push(card))
-        .catch(console.error)
-    axios('https://api.scryfall.com/cards/random')
-        .then(card => cardsArr.push(card))
-        .catch(console.error)
-    axios('https://api.scryfall.com/cards/random')
-        .then(card => cardsArr.push(card))
-        .catch(console.error)
-    if (cardsArr.length === 3){
-        return cardsArr
-    }
+    return axios('https://api.scryfall.com/cards/random')
 }

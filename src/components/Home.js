@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
-import { Spinner } from 'react-bootstrap'
+import { Spinner, Card, ListGroup } from 'react-bootstrap'
 import { randomCard } from '../api/scryfall'
 
 // Home component
@@ -57,8 +57,18 @@ const Home = (props) => {
             <form onSubmit={handleSubmit}>
                 <input type="submit" value="random card"/>
             </form>
-            <img src={randomCards.image_uris.normal.toString()}/>
-            <div>{randomCards.name}</div>
+            <Card style={{ maxWidth: '20rem'}}>
+                <Card.Img variant="top" src={randomCards.image_uris.normal.toString()}/>
+                <Card.Title>
+                    Card name: {randomCards.name}
+                </Card.Title>
+                <ListGroup variant="flush">
+                    <ListGroup.Item>Mana cost: {randomCards.mana_cost}</ListGroup.Item>
+                    <ListGroup.Item>Type line: {randomCards.type_line}</ListGroup.Item>
+                    <ListGroup.Item>Card text: {randomCards.oracle_text}</ListGroup.Item>
+                    <ListGroup.Item>Flavor text: {randomCards.flavor_text}</ListGroup.Item>
+                </ListGroup>
+            </Card>
         </>
     )
 }
