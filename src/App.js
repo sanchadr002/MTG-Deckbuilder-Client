@@ -12,6 +12,7 @@ import ChangePassword from './components/auth/ChangePassword'
 
 // component dependencies
 import Home from './components/Home'
+import Header from './components/shared/Header'
 
 const App = () => {
 
@@ -40,6 +41,7 @@ const App = () => {
 
   return (
     <Fragment>
+      <Header user={user} />
       <Routes>
         <Route
           path='/'
