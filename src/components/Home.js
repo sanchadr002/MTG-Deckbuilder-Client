@@ -11,18 +11,9 @@ import { randomCard } from '../api/scryfall'
     // MTG is a complicated game!
 // User will navigate to the various components of the application from here
 const Home = (props) => {
-
+    
     // use setState to change the card that is displayed in the Home return component
     const [randomCards, setCards] = useState(null)
-
-    // const randomCard = () => {
-    //     axios('https://api.scryfall.com/cards/random')
-    //         .then(res => {
-    //             // console.log(card.data.name)
-    //             setCards(res.data)
-    //         })
-    //         .catch(() => console.error())
-    // }
 
     useEffect(() => {
         randomCard()
