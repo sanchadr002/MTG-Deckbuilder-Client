@@ -57,7 +57,7 @@ const Home = (props) => {
             <form onSubmit={handleSubmit}>
                 <input type="submit" value="random card"/>
             </form>
-            <Card style={{ maxWidth: '20rem'}}>
+            <Card style={{ maxWidth: '15rem'}}>
                 <Card.Img variant="top" src={randomCards.image_uris.normal.toString()}/>
                 <Card.Title>
                     Card name: {randomCards.name}
