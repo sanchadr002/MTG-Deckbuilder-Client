@@ -52,6 +52,47 @@ const App = () => {
             />
           }
         />
+        <Route
+          path='/sign-up' 
+          element={
+            <SignUp 
+              msgAlert={msgAlert}
+              setUser={setUser}
+            />
+          }
+        />
+        <Route 
+          path='/sign-in'
+          element={
+            <SignIn 
+              msgAlert={msgAlert}
+              setUser={setUser}
+            />
+          }
+        />
+        <Route 
+          path='/sign-out'
+          element={
+            <RequireAuth user={user}>
+              <SignOut 
+                msgAlert={msgAlert}
+                clearUser={clearUser}
+                user={user}
+              />
+            </RequireAuth>
+          }
+        />
+        <Route 
+          path='/change-password'
+          element={
+            <RequireAuth>
+              <ChangePassword 
+                msgAlert={msgAlert}
+                user={user}
+              />
+            </RequireAuth>
+          }
+        />
       </Routes>
     </Fragment>
   );
