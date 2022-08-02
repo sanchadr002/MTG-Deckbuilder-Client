@@ -16,9 +16,11 @@ import Header from './components/shared/Header'
 
 const App = () => {
 
+  // create user and msgAlerts state variables for reference
   const [user, setUser] = useState(null)
   const [msgAlerts, setMsgAlerts] = useState([])
 
+  // function to set user to null in the frontend on sign out
   const clearUser = () => {
     console.log('clear user ran')
     setUser(null)
@@ -43,6 +45,8 @@ const App = () => {
     <Fragment>
       <Header user={user} />
       <Routes>
+
+        {/* Authorization-related routes */}
         <Route
           path='/'
           element={
@@ -93,6 +97,8 @@ const App = () => {
             </RequireAuth>
           }
         />
+        
+        {/* Routes for main site components */}
       </Routes>
     </Fragment>
   );
