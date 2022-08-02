@@ -13,6 +13,7 @@ import ChangePassword from './components/auth/ChangePassword'
 // component dependencies
 import Home from './components/Home'
 import Header from './components/shared/Header'
+import CardSearch from './components/shared/cards/CardSearch'
 
 const App = () => {
 
@@ -97,8 +98,19 @@ const App = () => {
             </RequireAuth>
           }
         />
-        
+
         {/* Routes for main site components */}
+        <Route 
+          path='/cards/search'
+          element={
+            <RequireAuth user={user}>
+              <CardSearch 
+                msgAlert={msgAlert}
+                user={user}
+              />
+            </RequireAuth>
+          }
+        />
       </Routes>
     </Fragment>
   );

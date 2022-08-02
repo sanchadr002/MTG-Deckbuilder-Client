@@ -12,7 +12,7 @@ import { Form, Container, Button } from 'react-bootstrap'
     // mana cost paramater will be added later
 const CardSearchForm = (props) => {
     
-    const {paramaters, handleChange, handleSubmit, heading} = props
+    const {handleChange, handleSubmit, heading} = props
 
     return (
         <Container className="justify-content-center">
@@ -21,7 +21,7 @@ const CardSearchForm = (props) => {
                 <Form.Label>Card Name:</Form.Label>
                 <Form.Control 
                     placeholder="Enter card name"
-                    name="card-name"
+                    name="cardName"
                     onChange={handleChange}
                 />
                 <Container>
