@@ -15,6 +15,7 @@ const Home = (props) => {
     // use setState to change the card that is displayed in the Home return component
     const [randomCards, setCards] = useState(null)
 
+    // useEffect hook to load a random card into the component below
     useEffect(() => {
         randomCard()
         .then(res => {
@@ -33,21 +34,40 @@ const Home = (props) => {
         return <p>No random cards found</p>
     }
 
-    const handleSubmit = (e) => {
-        e.preventDefault()
-        randomCard()
-        .then(res => {
-            return setCards(res.data)
-        })
-        console.log('click!')
-    }
+    // ---CODE FOR TESTING API CALLS ON THE FRONT END---
+    // const handleSubmit = (e) => {
+    //     e.preventDefault()
+    //     randomCard()
+    //     .then(res => {
+    //         return setCards(res.data)
+    //     })
+    //     console.log('click!')
+    // }
 
     console.log('this is randomCards', randomCards)
     return (
         <>
-            <form onSubmit={handleSubmit}>
+            {/* ---BUTTON FOR TESTING API CALLS ON THE FRONT END--- */}
+            {/* <form onSubmit={handleSubmit}>
                 <input type="submit" value="random card"/>
-            </form>
+            </form> */}
+            <header>
+                <h1>Welcome to MTG Deckbuildr!</h1>
+            </header>
+            <main>
+                <p>
+                    This app lets you build a Magic: The Gathering deck with cards in the "Standard" format.<br/>
+                    To get started, sign-up/sign-in and click on "New Deck" in the header.<br/>
+                    Once you've created some decks, you'll be able to view decks you've created in "My Decks", and see what cards are in decks you've created in "Card Collection".<br/>
+                    <footer>
+                        <small>
+                            For more detailed instructions on how to use Deckbuildr, click "About" in the page header.  
+                        </small>
+                    </footer>
+                </p>
+            </main>
+            {/* Card for displaying a random card on page render */}
+            {/* Helps to compel users to check out the app with a brighter and busier landing page */}
             <Card style={{ maxWidth: '15rem'}}>
                 <Card.Img variant="top" src={randomCards.image_uris.normal.toString()}/>
                 <Card.Title>

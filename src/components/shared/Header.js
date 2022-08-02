@@ -18,7 +18,7 @@ const authenticatedOptions = (
             <Link to={'/cards'} style={linkStyle}>Card Collection</Link>
         </Nav.Link>
         <Nav.Link>
-            <Link to={'/decks/new'} style={linkStyle}>New Deck</Link>
+            <Link to={'/cards/search'} style={linkStyle}>New Deck</Link>
         </Nav.Link>
         <Nav.Link>
             <Link to='change-password' style={linkStyle}>

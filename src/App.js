@@ -13,12 +13,15 @@ import ChangePassword from './components/auth/ChangePassword'
 // component dependencies
 import Home from './components/Home'
 import Header from './components/shared/Header'
+import CardSearch from './components/shared/cards/CardSearch'
 
 const App = () => {
 
+  // create user and msgAlerts state variables for reference
   const [user, setUser] = useState(null)
   const [msgAlerts, setMsgAlerts] = useState([])
 
+  // function to set user to null in the frontend on sign out
   const clearUser = () => {
     console.log('clear user ran')
     setUser(null)
@@ -43,6 +46,8 @@ const App = () => {
     <Fragment>
       <Header user={user} />
       <Routes>
+
+        {/* Authorization-related routes */}
         <Route
           path='/'
           element={
@@ -87,6 +92,19 @@ const App = () => {
           element={
             <RequireAuth>
               <ChangePassword 
+                msgAlert={msgAlert}
+                user={user}
+              />
+            </RequireAuth>
+          }
+        />
+
+        {/* Routes for main site components */}
+        <Route 
+          path='/cards/search'
+          element={
+            <RequireAuth user={user}>
+              <CardSearch 
                 msgAlert={msgAlert}
                 user={user}
               />
