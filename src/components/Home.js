@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import axios from 'axios'
 import { Spinner, Card, ListGroup } from 'react-bootstrap'
 import { randomCard } from '../api/scryfall'
+import MTGCard from './shared/cards/MTGCard'
 
 // Home component
 // Home will act as a landing page
@@ -65,21 +66,22 @@ const Home = (props) => {
                         </small>
                     </footer>
                 </p>
+                {/* Card for displaying a random card on page render */}
+                {/* Helps to compel users to check out the app with a brighter and busier landing page */}
+                {/* <Card style={{ maxWidth: '15rem'}}>
+                    <Card.Img variant="top" src={randomCards.image_uris.normal.toString()}/>
+                    <Card.Title>
+                        Card name: {randomCards.name}
+                    </Card.Title>
+                    <ListGroup variant="flush">
+                        <ListGroup.Item>Mana cost: {randomCards.mana_cost}</ListGroup.Item>
+                        <ListGroup.Item>Type line: {randomCards.type_line}</ListGroup.Item>
+                        <ListGroup.Item>Card text: {randomCards.oracle_text}</ListGroup.Item>
+                        <ListGroup.Item>Flavor text: {randomCards.flavor_text}</ListGroup.Item>
+                    </ListGroup>
+                </Card> */}
+                <MTGCard cardInfo={randomCards}/>
             </main>
-            {/* Card for displaying a random card on page render */}
-            {/* Helps to compel users to check out the app with a brighter and busier landing page */}
-            <Card style={{ maxWidth: '15rem'}}>
-                <Card.Img variant="top" src={randomCards.image_uris.normal.toString()}/>
-                <Card.Title>
-                    Card name: {randomCards.name}
-                </Card.Title>
-                <ListGroup variant="flush">
-                    <ListGroup.Item>Mana cost: {randomCards.mana_cost}</ListGroup.Item>
-                    <ListGroup.Item>Type line: {randomCards.type_line}</ListGroup.Item>
-                    <ListGroup.Item>Card text: {randomCards.oracle_text}</ListGroup.Item>
-                    <ListGroup.Item>Flavor text: {randomCards.flavor_text}</ListGroup.Item>
-                </ListGroup>
-            </Card>
         </>
     )
 }
