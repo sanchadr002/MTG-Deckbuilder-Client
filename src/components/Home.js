@@ -2,9 +2,9 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
-import { Spinner, Card, ListGroup } from 'react-bootstrap'
+import { Spinner } from 'react-bootstrap'
 import { randomCard } from '../api/scryfall'
-import MTGCard from './shared/cards/MTGCard'
+import MTGCard from './cards/MTGCard'
 
 // Home component
 // Home will act as a landing page

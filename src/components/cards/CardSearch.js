@@ -1,6 +1,7 @@
 // import dependencies
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { scryfallSearch } from '../../api/scryfall'
 import CardSearchForm from './CardSearchForm'
 
 // set up component
@@ -8,7 +9,7 @@ const CardSearch = (props) => {
     // set up hooks & variables
     const navigate = useNavigate()
     const [query, setQuery] = useState(null)
-
+    
     // handleChange function to manage our card name text inputs
     const handleChange = (e) => {
         e.persist()

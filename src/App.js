@@ -13,7 +13,7 @@ import ChangePassword from './components/auth/ChangePassword'
 // component dependencies
 import Home from './components/Home'
 import Header from './components/shared/Header'
-import CardSearch from './components/shared/cards/CardSearch'
+import CardSearch from './components/cards/CardSearch'
 
 const App = () => {
 

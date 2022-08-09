@@ -25,6 +25,7 @@ const CardSearchForm = (props) => {
                     onChange={handleChange}
                 />
                 <Container>
+                    
                     <Form.Label>Card Type:</Form.Label>
                     <Form.Check 
                         label="Artifact"
