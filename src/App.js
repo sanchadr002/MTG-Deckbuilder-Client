@@ -14,6 +14,7 @@ import ChangePassword from './components/auth/ChangePassword'
 import Home from './components/Home'
 import Header from './components/shared/Header'
 import CardSearch from './components/cards/CardSearch'
+import CardIndex from './components/cards/CardIndex'
 
 const App = () => {
 
@@ -107,6 +108,16 @@ const App = () => {
               <CardSearch 
                 msgAlert={msgAlert}
                 user={user}
+              />
+            </RequireAuth>
+          }
+        />
+        <Route 
+          path="/cards/results"
+          element={
+            <RequireAuth user={user}>
+              <CardIndex 
+                msgAlert={msgAlert}
               />
             </RequireAuth>
           }

@@ -38,10 +38,7 @@ const CardSearch = (props) => {
         for (let i = 0; i < checkedBoxes.length; i++){
             searchParams.push(checkedBoxes[i].name)
         }
-        setQuery(() => {
-            return searchParams
-        })
-        navigate('/cards/results', {state:{query}})
+        navigate('/cards/results', {state:{searchParams}})
         // console.log('this is query in CardSearch', query)
         // console.log('this is searchParams in CardSearch', searchParams)
         // console.log('this is checkedBoxes in CardSearch', checkedBoxes)

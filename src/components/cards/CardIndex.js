@@ -19,11 +19,14 @@ const CardIndex = (props) => {
     // Retrieves object data from CardSearch
     const { state } = useLocation()
     const [searchResults, setSearchResults] = useState(null)
-    const { card, msgAlert } = props
+    const { msgAlert } = props
 
+    // Build a function that extracts the parameters from state and converts them into a searchable string for the Scryfall API
     // Our card search will be called within useEffect
     useEffect(() => {
-        scryfallSearch(state.query.card)
+        // scryfallSearch(state.query.card)
+        console.log('this is state in CardIndex', state)
     })
 }
 
+export default CardIndex
