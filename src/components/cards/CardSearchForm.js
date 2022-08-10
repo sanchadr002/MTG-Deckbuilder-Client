@@ -17,6 +17,7 @@ const CardSearchForm = (props) => {
     return (
         <Container className="justify-content-center">
             <h3>{heading}</h3>
+            
             <Form onSubmit={handleSubmit}>
                 <Form.Label>Card Name:</Form.Label>
                 <Form.Control 
@@ -29,54 +30,78 @@ const CardSearchForm = (props) => {
                     <Form.Label>Card Type:</Form.Label>
                     <Form.Check 
                         label="Artifact"
+                        name="artifact"
                         id="artifact"
+                        class="cardType"
                     />
                     <Form.Check 
                         label="Creature"
+                        name="creature"
                         id="creature"
+                        class="cardType"
                     />
                     <Form.Check 
                         label="Enchantment"
+                        name="enchantment"
                         id="Enchantment"
+                        class="cardType"
                     />
                     <Form.Check 
                         label="Instant"
+                        name="instant"
                         id="instant"
+                        class="cardType"
                     />
                     <Form.Check 
                         label="Land"
+                        name="land"
                         id="land"
+                        class="cardType"
                     />
                     <Form.Check 
                         label="Planeswalker"
+                        name="planeswalker"
                         id="planeswalker"
+                        class="cardType"
                     />
                     <Form.Check 
                         label="Sorcery"
+                        name="sorcery"
                         id="sorcery"
+                        class="cardType"
                     />
                 </Container>
                 <Container>
                     <Form.Label>Mana Color</Form.Label>
                     <Form.Check 
                         label="White"
+                        name="white"
                         id="white"
+                        class="color"
                     />
                     <Form.Check 
                         label="Blue"
+                        name="black"
                         id="blue"
+                        class="color"
                     />
                     <Form.Check 
                         label="Black"
+                        name="black"
                         id="black"
+                        class="color"
                     />
                     <Form.Check 
                         label="Red"
+                        name="red"
                         id="red"
+                        class="color"
                     />
                     <Form.Check 
                         label="Green"
+                        name="green"
                         id="green"
+                        class="color"
                     />
                 </Container>
                 <Button style={{ marginTop: "2%" }} type="submit">Search Cards</Button>
