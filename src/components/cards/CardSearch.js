@@ -1,7 +1,6 @@
 // Import dependencies
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { scryfallSearch } from '../../api/scryfall'
 import CardSearchForm from './CardSearchForm'
 
 // set up component
@@ -58,12 +57,12 @@ const CardSearch = (props) => {
         let manaColor = searchParams.manaColor.map(param => param = `c%3A${param}`)
         
         console.log(cardType)
-        let joinedTypes = cardType.join('%20or%20')
-        let joinedColors = manaColor.join('%20or%20')
+        let joinedTypes = cardType.join('%20and%20')
+        let joinedColors = manaColor.join('%20and%20')
 
         let searchString
         if (searchParams.cardType[0] && searchParams.manaColor[0]){
-            searchString = `%28${joinedTypes}%29%20and%20%28${joinedColors}%29`
+            searchString = `${joinedTypes}%20and%20${joinedColors}`
         }
 
         if (searchParams.cardType[0] && !searchParams.manaColor[0]){

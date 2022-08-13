@@ -32,7 +32,10 @@ const MTGCard = (props) => {
                 <ListGroup.Item>Mana Cost: {cardInfo.mana_cost}</ListGroup.Item>
                 <ListGroup.Item>Card Type: {cardInfo.type_line}</ListGroup.Item>
                 <ListGroup.Item>Oracle Text: {cardInfo.oracle_text}</ListGroup.Item>
-                <ListGroup.Item>Flavor Text: {cardInfo.flavor_text}</ListGroup.Item>
+                {
+                    cardInfo.flavor_text && <ListGroup.Item>Flavor Text: {cardInfo.flavor_text}</ListGroup.Item>
+                }
+                {/* <ListGroup.Item>Flavor Text: {cardInfo.flavor_text}</ListGroup.Item> */}
             </ListGroup>
         </Card>
     )
