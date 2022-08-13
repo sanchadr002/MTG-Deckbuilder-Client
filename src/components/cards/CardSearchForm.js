@@ -32,43 +32,43 @@ const CardSearchForm = (props) => {
                         label="Artifact"
                         name="artifact"
                         id="artifact"
-                        class="cardType"
+                        className="cardType"
                     />
                     <Form.Check 
                         label="Creature"
                         name="creature"
                         id="creature"
-                        class="cardType"
+                        className="cardType"
                     />
                     <Form.Check 
                         label="Enchantment"
                         name="enchantment"
                         id="Enchantment"
-                        class="cardType"
+                        className="cardType"
                     />
                     <Form.Check 
                         label="Instant"
                         name="instant"
                         id="instant"
-                        class="cardType"
+                        className="cardType"
                     />
                     <Form.Check 
                         label="Land"
                         name="land"
                         id="land"
-                        class="cardType"
+                        className="cardType"
                     />
                     <Form.Check 
                         label="Planeswalker"
                         name="planeswalker"
                         id="planeswalker"
-                        class="cardType"
+                        className="cardType"
                     />
                     <Form.Check 
                         label="Sorcery"
                         name="sorcery"
                         id="sorcery"
-                        class="cardType"
+                        className="cardType"
                     />
                 </Container>
                 <Container>
@@ -77,31 +77,31 @@ const CardSearchForm = (props) => {
                         label="White"
                         name="white"
                         id="white"
-                        class="color"
+                        className="color"
                     />
                     <Form.Check 
                         label="Blue"
-                        name="black"
+                        name="blue"
                         id="blue"
-                        class="color"
+                        className="color"
                     />
                     <Form.Check 
                         label="Black"
                         name="black"
                         id="black"
-                        class="color"
+                        className="color"
                     />
                     <Form.Check 
                         label="Red"
                         name="red"
                         id="red"
-                        class="color"
+                        className="color"
                     />
                     <Form.Check 
                         label="Green"
                         name="green"
                         id="green"
-                        class="color"
+                        className="color"
                     />
                 </Container>
                 <Button style={{ marginTop: "2%" }} type="submit">Search Cards</Button>
