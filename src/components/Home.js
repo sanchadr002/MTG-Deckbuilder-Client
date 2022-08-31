@@ -80,7 +80,7 @@ const Home = (props) => {
                         <ListGroup.Item>Flavor text: {randomCards.flavor_text}</ListGroup.Item>
                     </ListGroup>
                 </Card> */}
-                <MTGCard cardInfo={randomCards}/>
+                <MTGCard data={randomCards}/>
             </main>
         </>
     )
