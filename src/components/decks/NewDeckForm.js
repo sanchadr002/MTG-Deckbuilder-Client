@@ -3,7 +3,7 @@ import { Form, Button } from 'react-bootstrap'
 
 const NewDeckForm = (props) => {
     // Add onSubmit function to create an empty deck that the user will update with each card addition
-    
+    // function should also navigate user to the card search form
     return (
         <Form>
             <Form.Label>Deck name</Form.Label>
