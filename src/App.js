@@ -15,6 +15,7 @@ import Home from './components/Home'
 import Header from './components/shared/Header'
 import CardSearch from './components/cards/CardSearch'
 import CardIndex from './components/cards/CardIndex'
+import NewDeckForm from './components/decks/NewDeckForm'
 
 const App = () => {
 
@@ -101,6 +102,17 @@ const App = () => {
         />
 
         {/* Routes for main site components */}
+        <Route 
+          path='/new-deck'
+          element={
+            <RequireAuth user={user}>
+              <NewDeckForm 
+                msgAlert={msgAlert}
+                user={user}
+              />
+            </RequireAuth>
+          }
+        />
         <Route 
           path='/cards/search'
           element={
