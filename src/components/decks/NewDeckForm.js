@@ -1,5 +1,5 @@
 import React from 'react'
-import { Form, Button } from 'react-bootstrap'
+import { Form, Button, Container } from 'react-bootstrap'
 import { useNavigate } from 'react-router-dom'
 
 const NewDeckForm = (props) => {
@@ -15,13 +15,15 @@ const NewDeckForm = (props) => {
     }
 
     return (
-        <Form onSubmit={handleSubmit}>
-            <Form.Label>Deck name</Form.Label>
-            <Form.Control type="text" placeholder="Enter deck name"/>
-            <Button type="submit">
-                Next
-            </Button>
-        </Form>
+        <Container>
+            <Form onSubmit={handleSubmit}>
+                <Form.Label>Deck name</Form.Label>
+                <Form.Control type="text" placeholder="Enter deck name"/>
+                <Button type="submit">
+                    Next
+                </Button>
+            </Form>
+        </Container>
     )
 }
 
