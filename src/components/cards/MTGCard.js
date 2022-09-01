@@ -24,7 +24,7 @@ const MTGCard = (props) => {
     // Declare our return statement that will contain the bootstrap Card component that displays the mtg card information
     return (
         <Card style={{ maxWidth: "15rem"}}>
-            <Card.Img variant="top" src={data.image_uris.normal.toString()}/>
+            {/* <Card.Img variant="top" src={data.image_uris.normal.toString()}/> */}
             <Card.Title>
                 {data.name}
             </Card.Title>

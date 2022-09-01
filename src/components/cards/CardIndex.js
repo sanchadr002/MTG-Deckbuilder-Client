@@ -68,7 +68,7 @@ const CardIndex = (props) => {
     return (
         <>
             <div style={cardContainerLayout}>
-                {cardResults}
+                {/* {cardResults} */}
             </div>
         </>
     )
