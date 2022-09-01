@@ -19,21 +19,21 @@ import { Card, ListGroup } from 'react-bootstrap'
 const MTGCard = (props) => {
 
     // Declare our props that have been passed into this component
-    const {cardInfo} = props
-    
+    const {data} = props
+    console.log('this is props in MTGCard', props)
     // Declare our return statement that will contain the bootstrap Card component that displays the mtg card information
     return (
         <Card style={{ maxWidth: "15rem"}}>
-            <Card.Img variant="top" src={cardInfo.image_uris.normal.toString()}/>
+            {/* <Card.Img variant="top" src={data.image_uris.normal.toString()}/> */}
             <Card.Title>
-                {cardInfo.name}
+                {data.name}
             </Card.Title>
             <ListGroup variant="flush">
-                <ListGroup.Item>Mana Cost: {cardInfo.mana_cost}</ListGroup.Item>
-                <ListGroup.Item>Card Type: {cardInfo.type_line}</ListGroup.Item>
-                <ListGroup.Item>Oracle Text: {cardInfo.oracle_text}</ListGroup.Item>
+                <ListGroup.Item>Mana Cost: {data.mana_cost}</ListGroup.Item>
+                <ListGroup.Item>Card Type: {data.type_line}</ListGroup.Item>
+                <ListGroup.Item>Oracle Text: {data.oracle_text}</ListGroup.Item>
                 {
-                    cardInfo.flavor_text && <ListGroup.Item>Flavor Text: {cardInfo.flavor_text}</ListGroup.Item>
+                    data.flavor_text && <ListGroup.Item>Flavor Text: {data.flavor_text}</ListGroup.Item>
                 }
                 {/* <ListGroup.Item>Flavor Text: {cardInfo.flavor_text}</ListGroup.Item> */}
             </ListGroup>

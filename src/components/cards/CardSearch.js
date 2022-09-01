@@ -56,7 +56,6 @@ const CardSearch = (props) => {
         let cardType = searchParams.cardType.map(param => param = `t%3A${param}`)
         let manaColor = searchParams.manaColor.map(param => param = `c%3A${param}`)
         
-        console.log(cardType)
         let joinedTypes = cardType.join('%20and%20')
         let joinedColors = manaColor.join('%20and%20')
 
