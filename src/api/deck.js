@@ -12,10 +12,10 @@ export const searchDecks = (user) => {
     return axios(config)
 }
 
-export const createDeck = (newDeck) => {
+export const createDeck = (user, newDeck) => {
     return axios({
         url: `${apiUrl}/decks`,
         method: 'POST',
-        data: { deck: newDeck}
+        data: { user: user, deck: newDeck }
     })
 }
