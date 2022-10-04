@@ -33,9 +33,6 @@
 
   | Description | Screenshot | 
   |:------------:|-----------| 
-  | <h3>ERD</h3> | <img
-    src="screenshots/deckbuildrERD.png"
-    width="700"
-  /> |
+  | <h3>ERD</h3> | <img src="screenshots/deckbuildrERD.png" width="700" /> |
 
 </details>
