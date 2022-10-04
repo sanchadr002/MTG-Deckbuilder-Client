@@ -33,7 +33,7 @@
 
   | Description | Screenshot | 
   |:------------:|-----------| 
-  | <h3>ERD</h3> | <img src="screenshots/deckbuildrERD.png" width="700" /> |
+  | <h3>ERD</h3> | <img src="screenshots/deckbuildrERD.png" width="700" /> 
 </details>
 
 <details>
@@ -41,11 +41,11 @@
 
   |    Description    | Screenshot | 
   |:-----------------:|-------------| 
-  | <h3>Home Page</h3>| <img src="screenshots/homepage.png" width="700"/> |
+  | <h3>Home Page</h3>| <img src="screenshots/homepage.png" width="700"/> 
 
-  | <h3>Card Search</h3> | <img src="screenshots/cardsearchpage.png" width="700"/> |
+  | <h3>Card Search</h3> | <img src="screenshots/cardsearchpage.png" width="700"/> 
 
-  | <h3>Card Results</h3> | <img src="screenshots/cardresultspage.png" width="700"/> |
+  | <h3>Card Results</h3> | <img src="screenshots/cardresultspage.png" width="700"/> 
 
-  | <h3>Deck Edit</h3> | <img src="screenshots/deckeditpage.png" width="700"/> |
+  | <h3>Deck Edit</h3> | <img src="screenshots/deckeditpage.png" width="700"/> 
 </details>
