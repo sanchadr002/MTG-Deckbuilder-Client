@@ -60,3 +60,30 @@
 ![Git](https://img.shields.io/badge/-Git-05122A?style=flat&logo=git)
 ![Github](https://img.shields.io/badge/-GitHub-05122A?style=flat&logo=github)
 ![VSCode](https://img.shields.io/badge/-VS_Code-05122A?style=flat&logo=visualstudio)
+
+<h2>:fire: Getting Started</h2>
+
+<h3>:calling: Instructions</h3>
+<details open>
+  <summary>How to Create a Deck</summary>
+  <ol>
+    <li>
+        Click on the "New Deck" button in the navigation bar at the top of the website.
+    </li>
+    <li>
+        Search for cards either by name or by mana value/card type paramaters.
+    </li>
+    <li>
+        Once on the results page, click the "add to deck" button below each card you'd like to add to your deck.
+    </li>
+    <li>
+        If you would like to add more cards to your deck, click the "Add more cards to deck" button in the lower left corner of the website.
+    </li>
+    <li>
+        Alternatively, if you would like to finish up your deck, click on the "Next step" button in the lower right corner of the website.
+    </li>
+    <li>
+        Give your deck a name, and click "Create deck".
+    </li>
+  </ol>
+</details>
