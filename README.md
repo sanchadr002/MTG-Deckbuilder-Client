@@ -25,3 +25,17 @@
     build a deck, without worrying about other information such 
     metagame standing, or buying options.
 </p>
+
+<h1>:camera: Screenshots</h1>
+
+<details>
+  <summary>:bar_chart: ERD</summary>
+
+  | Description | Screenshot | 
+  |:------------:|-----------| 
+  | <h3>ERD</h3> | <img
+    src="screenshots/deckbuildrERD.png"
+    width="700"
+  /> |
+
+</details>
